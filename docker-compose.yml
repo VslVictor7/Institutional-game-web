@@ -1,0 +1,17 @@
+services:
+  web_game:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    command: sh -c "python3 manage.py collectstatic --noinput && python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
+
+  # Comentar a parte de networks caso não seja usado o nginx proxy manager.
+    networks:
+      - proxy
+
+networks:
+  proxy:
