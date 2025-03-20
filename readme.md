@@ -5,7 +5,7 @@
 
 ## Instalação
 
-1. **Clone o Repositório** (if you haven’t done so already):
+1. **Clone o Repositório**:
 ```bash
    git clone <https://github.com/VslVictor7/Institutional-game-web.git>
 
